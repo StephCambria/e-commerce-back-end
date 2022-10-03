@@ -1,12 +1,13 @@
 const express = require("express");
 const routes = require("./routes");
+
 // import sequelize connection
 const sequelize = require("./config/connection");
 
-// npm i dotenv@8.6.0
-// npm i express@4.17.1
-// npm i mysql2@2.1.0
-// npm i sequelize@5.22.5
+// npm i --save dotenv
+// npm i --save express
+// npm i --save mysql2
+// npm i --save sequelize
 
 
 const app = express();
