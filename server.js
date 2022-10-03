@@ -4,12 +4,14 @@ const routes = require("./routes");
 const sequelize = require("./config/connection");
 
 // npm i dotenv@8.6.0
+// npm i dotenv-cli
 // npm i express@4.17.1
 // npm i mysql2@2.1.0
 // npm i sequelize@5.22.5
+// npm install --save-exact --save-dev sequelize-cli@5.5.1
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3306;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log(`App listening on port ${PORT}!`));
 });
 
