@@ -4,11 +4,6 @@ const routes = require("./routes");
 // import sequelize connection
 const sequelize = require("./config/connection");
 
-// npm i --save dotenv
-// npm i --save express
-// npm i --save mysql2
-// npm i --save sequelize
-
 
 const app = express();
 const PORT = process.env.PORT || 3306;
